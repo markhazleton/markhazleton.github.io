@@ -5,4 +5,6 @@
 layout: home
 ---
 
-Welcome to the home of the GitHub Pages Profile of Mark Hazleton
+Welcome to the home of Mark Hazleton on GitHub Pages.
+
+## Nothing to see here right now
