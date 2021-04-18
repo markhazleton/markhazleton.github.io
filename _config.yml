@@ -21,6 +21,7 @@ minima:
     twitter: markhazleton
     github: markhazleton
     linkedin: markhazleton
+    stackoverflow: "479571"
 exclude:
   - Gemfile
   - Gemfile.lock
