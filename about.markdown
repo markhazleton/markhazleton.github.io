@@ -4,7 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the minima Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This site was built with Jekyll and GitHub pages.
+
+This site uses the minima Jekyll theme.
+
+You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /

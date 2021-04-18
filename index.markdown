@@ -4,7 +4,3 @@
 
 layout: home
 ---
-
-Welcome to the home of Mark Hazleton on GitHub Pages.
-
-## Nothing to see here right now
