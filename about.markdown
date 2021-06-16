@@ -3,9 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
+
 > This is the personal GitHub site for Mark Hazleton
 
-# How I Buit This
+# How I Built This
+
 - This site was built with Jekyll and GitHub pages.
 - This site uses the minima Jekyll theme.
 
