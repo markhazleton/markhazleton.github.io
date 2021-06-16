@@ -51,6 +51,31 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Making some updates to the site as I learn more about jekyll and GitHub.io publishing</p>
 
+<p>Learned to update my config.yml to exclude my published (doc) folder, that way Jekyll is not trying to build a site recursivly .</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exclude:
+  - Gemfile
+  - Gemfile.lock
+  - /docs/
+  - /README.md
+</code></pre></div></div>
+
+<p>Also updated the config to include links to the published site</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Site settings
+title: Mark Hazleton
+email: mark.hazleton@controlorigins.com
+description: &gt;- # this means to ignore newlines until "baseurl:"
+  Mark Hazleton on GitHub
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://markhazleton.github.io/" # the base hostname &amp; protocol for your site, e.g. http://example.com
+author:
+  name: Mark Hazleton
+  email: mark.hazleton@controlorigins.com
+</code></pre></div></div>
+
+<p>Still need to pick how to automate the copy from my _sites folder to my docs folder that GitHub uses to publish updates to my site.</p>
+
   </div><a class="u-url" href="/jekyll/update/2021/06/16/site-updates.html" hidden></a>
 </article>
 
