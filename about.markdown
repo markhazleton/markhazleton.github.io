@@ -6,7 +6,7 @@ permalink: /about/
 
 > This is the personal GitHub site for Mark Hazleton
 
-# How I Built This
+## How I Built This
 
 - This site was built with Jekyll and GitHub pages.
 - This site uses the minima Jekyll theme.
