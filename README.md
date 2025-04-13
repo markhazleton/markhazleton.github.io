@@ -92,6 +92,33 @@ Your post content goes here.
 7. **Backup and Version Control**:
    - Regularly back up your work and use version control effectively.
 
+## Keeping Packages Updated
+
+To ensure your Jekyll site is using the latest versions of its dependencies, follow these steps:
+
+1. **Update Bundler**:
+   Run the following command to update Bundler to the latest version:
+   ```bash
+   gem install bundler
+   ```
+
+2. **Update Gems**:
+   Use Bundler to update all gems specified in the `Gemfile`:
+   ```bash
+   bundle update
+   ```
+
+3. **Verify Updates**:
+   After updating, check the `Gemfile.lock` file to confirm that the versions of the gems have been updated.
+
+4. **Test the Site**:
+   Run the Jekyll server to ensure everything works as expected:
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+By keeping your packages updated, you ensure your site benefits from the latest features, bug fixes, and security patches.
+
 ## Contents At-A-Glance
 
 Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
