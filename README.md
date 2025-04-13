@@ -98,12 +98,14 @@ To ensure your Jekyll site is using the latest versions of its dependencies, fol
 
 1. **Update Bundler**:
    Run the following command to update Bundler to the latest version:
+
    ```bash
    gem install bundler
    ```
 
 2. **Update Gems**:
    Use Bundler to update all gems specified in the `Gemfile`:
+
    ```bash
    bundle update
    ```
@@ -113,6 +115,7 @@ To ensure your Jekyll site is using the latest versions of its dependencies, fol
 
 4. **Test the Site**:
    Run the Jekyll server to ensure everything works as expected:
+
    ```bash
    bundle exec jekyll serve
    ```
