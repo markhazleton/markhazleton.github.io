@@ -5,6 +5,8 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
+    <button class="theme-switcher" onclick="toggleTheme()">Switch Theme</button>
+
     {%- if page_paths -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -28,3 +30,18 @@
     {%- endif -%}
   </div>
 </header>
+
+<script>
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    console.log(`Theme switched to: ${newTheme}`); // Debugging log
+  }
+
+  // Set the initial theme based on user preference or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  console.log(`Initial theme set to: ${savedTheme}`); // Debugging log
+</script>

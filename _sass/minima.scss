@@ -26,6 +26,13 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+$primary-color: #6200ea;
+$secondary-color: #03dac6;
+$background-light: #ffffff;
+$background-dark: #121212;
+$text-light: #000000;
+$text-dark: #ffffff;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -41,6 +48,54 @@ $on-laptop:        800px !default;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #ff9800; /* Orange */
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #ff9800; /* Orange */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header.site-header, footer.site-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+main.page-content {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.theme-switcher:hover {
+  background-color: rgba(255, 152, 0, 0.8); /* Slightly darker orange for hover effect */
 }
 
 // Import partials.

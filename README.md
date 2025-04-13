@@ -22,8 +22,75 @@ theme: minima
 
 And then execute:
 
-    $ bundle
+    bundle
 
+## Adding Posts
+
+To add a new post:
+
+1. Navigate to the `_posts` directory.
+2. Create a new file with the naming convention `YYYY-MM-DD-title-of-post.markdown`.
+3. Add the following front matter to the file:
+
+```markdown
+---
+layout: post
+title: "Your Post Title"
+date: YYYY-MM-DD HH:MM:SS +0000
+categories: [category1, category2]
+---
+
+Your post content goes here.
+```
+
+4. Save the file and commit your changes.
+
+## Running the Project on Windows 11 with VS Code
+
+1. **Install Prerequisites**:
+   - Install [Ruby](https://rubyinstaller.org/) and ensure it is added to your PATH.
+   - Install [Bundler](https://bundler.io/) by running `gem install bundler`.
+   - Install [Jekyll](https://jekyllrb.com/) by running `gem install jekyll`.
+   - Install [VS Code](https://code.visualstudio.com/).
+
+2. **Clone the Repository**:
+   - Clone this repository to your local machine using Git.
+
+3. **Install Dependencies**:
+   - Open a terminal in the project directory.
+   - Run `bundle install` to install the required gems.
+
+4. **Run the Development Server**:
+   - Start the Jekyll server by running `bundle exec jekyll serve`.
+   - Open your browser and navigate to `http://localhost:4000` to view the site.
+
+5. **Edit and Preview**:
+   - Use VS Code to edit files.
+   - The site will automatically reload when you save changes.
+
+## Best Practices
+
+1. **Follow Naming Conventions**:
+   - Use consistent naming for posts and files.
+
+2. **Use Git Effectively**:
+   - Commit changes frequently with meaningful commit messages.
+   - Use branches for new features or fixes.
+
+3. **Test Locally**:
+   - Always test your changes locally before pushing to the repository.
+
+4. **Keep Dependencies Updated**:
+   - Run `bundle update` periodically to keep gems up to date.
+
+5. **Use Themes and Plugins**:
+   - Leverage Jekyll themes and plugins for additional functionality.
+
+6. **Accessibility and SEO**:
+   - Ensure your site is accessible and optimized for search engines.
+
+7. **Backup and Version Control**:
+   - Regularly back up your work and use version control effectively.
 
 ## Contents At-A-Glance
 
@@ -33,29 +100,29 @@ Minima has been scaffolded by the `jekyll new-theme` command and therefore has a
 
 Refers to files within the `_layouts` directory, that define the markup for your theme.
 
-  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-  - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
-  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
-  - `post.html` &mdash; The layout for your posts.
+- `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
+- `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
+- `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
+- `post.html` &mdash; The layout for your posts.
 
 ### Includes
 
 Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
 
-  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
+- `disqus_comments.html` &mdash; Code to markup disqus comment box.
+- `footer.html` &mdash; Defines the site's footer section.
+- `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
+- `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+- `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
 
 ### Sass
 
 Refers to `.scss` files within the `_sass` directory that define the theme's styles.
 
-  - `minima.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-  - `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
-  - `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
-  - `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
+- `minima.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
+- `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
+- `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
+- `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
 
 ### Assets
 
@@ -92,9 +159,10 @@ The title for this section is `Posts` by default and rendered with an `<h2>` tag
 ### Customization
 
 To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
+e.g., to override the [`_includes/head.html`](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
 
 The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](assets/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
+
 - Create a new instance of `main.scss` at site source.
   - Create a new file `main.scss` at `<your-site>/assets/`
   - Add the frontmatter dashes, and
@@ -205,7 +273,7 @@ show_excerpts: true
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/jekyll/minima>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 

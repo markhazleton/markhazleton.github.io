@@ -22,14 +22,14 @@ Also updated the config to include links to the published site
 ```
 # Site settings
 title: Mark Hazleton
-email: mark.hazleton@controlorigins.com
+email: "" # Removed email
 description: >- # this means to ignore newlines until "baseurl:"
   Mark Hazleton on GitHub
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://markhazleton.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 author:
   name: Mark Hazleton
-  email: mark.hazleton@controlorigins.com
+  email: "" # Removed email
 ```
 
 Still need to pick how to automate the copy from my \_sites folder to my docs folder that GitHub uses to publish updates to my site.
