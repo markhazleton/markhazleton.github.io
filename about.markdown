@@ -15,39 +15,51 @@ Mark's expertise spans a wide range of technologies, including Microsoft Azure, 
 Creating a website on GitHub using Jekyll is a straightforward process that combines the power of static site generation with the convenience of GitHub Pages. Below is a detailed guide and best practices for building your site:
 
 ### Step 1: Set Up Your Environment
+
 1. Install Ruby and Bundler on your local machine.
 2. Install Jekyll by running:
+
    ```bash
    gem install jekyll bundler
    ```
+
 3. Create a new Jekyll site:
+
    ```bash
    jekyll new my-site
    ```
+
 4. Navigate to your site directory and install dependencies:
+
    ```bash
    cd my-site
    bundle install
    ```
 
 ### Step 2: Customize Your Site
+
 1. Edit the `_config.yml` file to configure your site settings.
 2. Add or modify layouts in the `_layouts` directory.
 3. Create new posts in the `_posts` directory using the naming convention `YYYY-MM-DD-title.markdown`.
 4. Use the `_includes` directory for reusable components like headers and footers.
 
 ### Step 3: Test Locally
+
 Run the following command to serve your site locally:
+
 ```bash
 bundle exec jekyll serve
 ```
+
 Visit `http://localhost:4000` in your browser to preview your site.
 
 ### Step 4: Deploy to GitHub Pages
+
 1. Push your site to a GitHub repository.
 2. Enable GitHub Pages in the repository settings and select the branch to serve from (e.g., `main` or `gh-pages`).
 
 ### Best Practices
+
 - **Version Control**: Use Git effectively to track changes and collaborate.
 - **Keep Dependencies Updated**: Regularly run `bundle update` to ensure your gems are up to date.
 - **Optimize for Performance**: Minimize CSS and JavaScript files and use a CDN for assets.
@@ -55,5 +67,3 @@ Visit `http://localhost:4000` in your browser to preview your site.
 - **Backup Your Work**: Regularly back up your repository to avoid data loss.
 
 By following these steps and best practices, you can create a professional and efficient website using Jekyll and GitHub Pages.
-
-
