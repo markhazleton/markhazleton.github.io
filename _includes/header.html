@@ -1,47 +1,134 @@
-<header class="site-header" role="banner">
+<header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ "/" | relative_url }}">
+      <i class="bi bi-code-slash me-2 fs-4"></i>
+      {{ site.title | escape }}
+    </a>
 
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <!-- Mobile menu button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <button class="theme-switcher" onclick="toggleTheme()">Switch Theme</button>
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">
+            <i class="bi bi-house me-1"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ "/about/" | relative_url }}">
+            <i class="bi bi-person me-1"></i>About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ "/feed.xml" | relative_url }}">
+            <i class="bi bi-rss me-1"></i>RSS
+          </a>
+        </li>
+      </ul>
 
-    {%- if page_paths -%}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+      <!-- Social Links -->
+      <ul class="navbar-nav me-3">
+        {%- if site.minima.social_links.github -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/{{ site.minima.social_links.github }}" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if site.minima.social_links.twitter -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/{{ site.minima.social_links.twitter }}" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if site.minima.social_links.linkedin -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/in/{{ site.minima.social_links.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- if site.minima.social_links.stackoverflow -%}
+        <li class="nav-item">
+          <a class="nav-link" href="https://stackoverflow.com/users/{{ site.minima.social_links.stackoverflow }}" target="_blank" rel="noopener noreferrer" title="Stack Overflow">
+            <i class="bi bi-stack-overflow"></i>
+          </a>
+        </li>
+        {%- endif -%}
+      </ul>
 
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
-    {%- endif -%}
+      <!-- Theme Switcher -->
+      <div class="dropdown">
+        <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center" 
+                id="bd-theme" 
+                type="button" 
+                aria-expanded="false" 
+                data-bs-toggle="dropdown" 
+                aria-label="Toggle theme (auto)">
+          <svg class="bi theme-icon-active" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                <use href="#sun-fill"></use>
+              </svg>
+              Light
+              <svg class="bi ms-auto d-none" width="1em" height="1em">
+                <use href="#check2"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                <use href="#moon-stars-fill"></use>
+              </svg>
+              Dark
+              <svg class="bi ms-auto d-none" width="1em" height="1em">
+                <use href="#check2"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                <use href="#circle-half"></use>
+              </svg>
+              Auto
+              <svg class="bi ms-auto d-none" width="1em" height="1em">
+                <use href="#check2"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>
 
-<script>
-  function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    console.log(`Theme switched to: ${newTheme}`); // Debugging log
-  }
-
-  // Set the initial theme based on user preference or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  console.log(`Initial theme set to: ${savedTheme}`); // Debugging log
-</script>
+<!-- SVG Icons for Theme Switcher -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>

@@ -2,7 +2,7 @@
 title: Mark Hazleton
 email: "" # Removed email
 description: > # this means to ignore newlines until "baseurl:"
-  Mark Hazleton on GitHub
+  Mark Hazleton on GitHub - Software Development, Technology, and Innovation
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://markhazleton.com" # Updated to MarkHazleton.com
 author:
@@ -20,6 +20,14 @@ plugins:
 # Remote theme
 remote_theme: null
 
+# Content settings
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
+
 # Minima theme settings
 minima:
   skin: dark
@@ -29,6 +37,19 @@ minima:
     linkedin: markhazleton
     stackoverflow: "479571"
 
+# SEO settings
+lang: en
+twitter:
+  username: markhazleton
+  card: summary
+social:
+  name: Mark Hazleton
+  links:
+    - https://twitter.com/markhazleton
+    - https://github.com/markhazleton
+    - https://linkedin.com/in/markhazleton
+    - https://stackoverflow.com/users/479571
+
 # Exclusions
 exclude:
   - Gemfile
@@ -37,7 +58,30 @@ exclude:
   - /README.md
   - node_modules/
   - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
 
 # Additional configurations
 sass:
   style: compressed # Compress CSS for better performance
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Mark Hazleton"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

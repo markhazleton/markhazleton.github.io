@@ -1,316 +1,684 @@
-# minima
+# Mark Hazleton's Personal Jekyll Site
 
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+[![Deploy Jekyll site to Pages](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml)
+[![Ruby](https://img.shields.io/badge/Ruby-3.2-red.svg)](https://www.ruby-lang.org/)
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.3-blue.svg)](https://jekyllrb.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Theme preview](https://jekyll.github.io/minima/)
+This is Mark Hazleton's personal website built with Jekyll and hosted on GitHub Pages. The site uses a customized version of the Minima theme with dark/light mode toggle and modern styling.
 
-![minima theme preview](/screenshot.png)
+## 🚀 Quick Start
 
-## Installation
+### Prerequisites
 
-Add this line to your Jekyll site's Gemfile:
+- Ruby 3.2 or higher
+- Bundler gem
+- Git
 
-```ruby
-gem "minima"
+### Local Development Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/markhazleton/markhazleton.github.io.git
+   cd markhazleton.github.io
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bundle install
+   ```
+
+3. **Run the development server**
+   ```bash
+   bundle exec jekyll serve --livereload
+   ```
+
+4. **View the site**
+   Open [http://localhost:4000](http://localhost:4000) in your browser
+
+The site will automatically reload when you make changes to files.
+
+## ✍️ Creating and Publishing Posts
+
+### 1. Create a New Post
+
+Posts are stored in the `_posts` directory and must follow the naming convention:
+```
+YYYY-MM-DD-title-of-post.markdown
 ```
 
-And add this line to your Jekyll site:
+**Example filename:** `2025-07-24-my-awesome-post.markdown`
 
-```yaml
-theme: minima
-```
+### 2. Post Structure
 
-And then execute:
-
-    bundle
-
-## Adding Posts
-
-To add a new post:
-
-1. Navigate to the `_posts` directory.
-2. Create a new file with the naming convention `YYYY-MM-DD-title-of-post.markdown`.
-3. Add the following front matter to the file:
+Create a new file with the following front matter template:
 
 ```markdown
 ---
 layout: post
-title: "Your Post Title"
-date: YYYY-MM-DD HH:MM:SS +0000
+title: "Your Compelling Post Title"
+date: 2025-07-24 10:00:00 +0000
 categories: [category1, category2]
+tags: [tag1, tag2, tag3]
+author: Mark Hazleton
+excerpt: "A brief description that appears in post previews and SEO"
 ---
 
-Your post content goes here.
+Your compelling content goes here. Use Markdown for formatting.
+
+## Subheadings
+
+- Bullet points
+- Are supported
+
+### Code Examples
+
+```javascript
+function hello() {
+    console.log("Hello, World!");
+}
 ```
 
-4. Save the file and commit your changes.
+**Bold text** and *italic text* work as expected.
 
-## Running the Project on Windows 11 with VS Code
+[Links](https://example.com) are also supported.
+```
 
-1. **Install Prerequisites**:
-   - Install [Ruby](https://rubyinstaller.org/) and ensure it is added to your PATH.
-   - Install [Bundler](https://bundler.io/) by running `gem install bundler`.
-   - Install [Jekyll](https://jekyllrb.com/) by running `gem install jekyll`.
-   - Install [VS Code](https://code.visualstudio.com/).
+### 3. Best Practices for Posts
 
-2. **Clone the Repository**:
-   - Clone this repository to your local machine using Git.
+#### Content Guidelines
+- **Write compelling titles** that accurately describe your content
+- **Use descriptive excerpts** (150-160 characters) for better SEO
+- **Structure content** with proper headings (H2, H3, etc.)
+- **Include relevant tags and categories** for better organization
+- **Add code syntax highlighting** when sharing code snippets
+- **Optimize images** and use descriptive alt text
 
-3. **Install Dependencies**:
-   - Open a terminal in the project directory.
-   - Run `bundle install` to install the required gems.
+#### SEO Optimization
+- Use the `excerpt` field for meta descriptions
+- Include relevant keywords naturally in your content
+- Use proper heading hierarchy (H1 → H2 → H3)
+- Add meaningful alt text to images
+- Internal and external linking for context
 
-4. **Run the Development Server**:
-   - Start the Jekyll server by running `bundle exec jekyll serve`.
-   - Open your browser and navigate to `http://localhost:4000` to view the site.
+#### Front Matter Options
+```yaml
+---
+layout: post                    # Always use 'post' for blog posts
+title: "Your Post Title"        # Required: SEO and display title
+date: YYYY-MM-DD HH:MM:SS +0000 # Required: Publication date/time
+categories: [updates, tech]     # Optional: Broad categorization
+tags: [jekyll, github, coding]  # Optional: Specific topics
+author: Mark Hazleton          # Optional: Author name
+excerpt: "Brief description"    # Optional: Custom excerpt for SEO
+image: /assets/images/post.jpg  # Optional: Featured image
+comments: true                  # Optional: Enable/disable comments (default: true)
+---
+```
 
-5. **Edit and Preview**:
-   - Use VS Code to edit files.
-   - The site will automatically reload when you save changes.
+### 4. Publishing Workflow
 
-## Best Practices
+#### Option A: Direct to Main Branch (Recommended for quick updates)
+```bash
+# 1. Create your post file
+touch _posts/2025-07-24-your-post-title.markdown
 
-1. **Follow Naming Conventions**:
-   - Use consistent naming for posts and files.
+# 2. Write your content
+# Edit the file with your preferred editor
 
-2. **Use Git Effectively**:
-   - Commit changes frequently with meaningful commit messages.
-   - Use branches for new features or fixes.
+# 3. Preview locally
+bundle exec jekyll serve --livereload
 
-3. **Test Locally**:
-   - Always test your changes locally before pushing to the repository.
+# 4. Commit and push
+git add _posts/2025-07-24-your-post-title.markdown
+git commit -m "Add new post: Your Post Title"
+git push origin sources
+```
 
-4. **Keep Dependencies Updated**:
-   - Run `bundle update` periodically to keep gems up to date.
+#### Option B: Feature Branch Workflow (Recommended for major content)
+```bash
+# 1. Create a new branch
+git checkout -b post/your-post-title
 
-5. **Use Themes and Plugins**:
-   - Leverage Jekyll themes and plugins for additional functionality.
+# 2. Create and write your post
+touch _posts/2025-07-24-your-post-title.markdown
+# Edit the file
 
-6. **Accessibility and SEO**:
-   - Ensure your site is accessible and optimized for search engines.
+# 3. Test locally
+bundle exec jekyll serve --livereload
 
-7. **Backup and Version Control**:
-   - Regularly back up your work and use version control effectively.
+# 4. Commit changes
+git add _posts/2025-07-24-your-post-title.markdown
+git commit -m "Add new post: Your Post Title"
 
-## Keeping Packages Updated
+# 5. Push and create pull request
+git push origin post/your-post-title
+# Create PR via GitHub interface
 
-To ensure your Jekyll site is using the latest versions of its dependencies, follow these steps:
+# 6. After review, merge to sources branch
+```
 
-1. **Update Bundler**:
-   Run the following command to update Bundler to the latest version:
+### 5. Automated Deployment
 
-   ```bash
-   gem install bundler
-   ```
+The site uses GitHub Actions for automated deployment:
+- **Trigger**: Push to `sources` branch
+- **Build**: Ruby 3.2, Jekyll 4.3+
+- **Deploy**: GitHub Pages
+- **URL**: https://markhazleton.com
 
-2. **Update Gems**:
-   Use Bundler to update all gems specified in the `Gemfile`:
+Check deployment status at: [Actions tab](https://github.com/markhazleton/markhazleton.github.io/actions)
 
-   ```bash
-   bundle update
-   ```
+## 🛠️ Local Development
 
-3. **Verify Updates**:
-   After updating, check the `Gemfile.lock` file to confirm that the versions of the gems have been updated.
+### System Requirements
 
-4. **Test the Site**:
-   Run the Jekyll server to ensure everything works as expected:
+| Component | Version | Purpose |
+|-----------|---------|---------|
+| Ruby | 3.2+ | Jekyll runtime |
+| Bundler | Latest | Dependency management |
+| Git | Latest | Version control |
+| Node.js | 16+ (optional) | Asset processing |
 
-   ```bash
-   bundle exec jekyll serve
-   ```
+### Development Environment Setup
 
-By keeping your packages updated, you ensure your site benefits from the latest features, bug fixes, and security patches.
+#### macOS Setup
+```bash
+# Install Ruby via Homebrew (recommended)
+brew install ruby
 
-## Contents At-A-Glance
+# Add Ruby to PATH
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 
-Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+# Install Bundler
+gem install bundler
 
-### Layouts
+# Verify installation
+ruby --version  # Should be 3.2+
+bundle --version
+```
 
-Refers to files within the `_layouts` directory, that define the markup for your theme.
+#### Windows Setup
+```powershell
+# Install Ruby using RubyInstaller
+# Download from: https://rubyinstaller.org/
+# Choose Ruby+Devkit 3.2.x (x64)
 
-- `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-- `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
-- `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
-- `post.html` &mdash; The layout for your posts.
+# Install Bundler
+gem install bundler
 
-### Includes
+# Verify installation
+ruby --version
+bundle --version
+```
 
-Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
+#### Linux (Ubuntu/Debian) Setup
+```bash
+# Install Ruby and development tools
+sudo apt update
+sudo apt install ruby-full build-essential zlib1g-dev
 
-- `disqus_comments.html` &mdash; Code to markup disqus comment box.
-- `footer.html` &mdash; Defines the site's footer section.
-- `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-- `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-- `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
+# Configure gem installation directory
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 
-### Sass
+# Install Bundler
+gem install bundler
+```
 
-Refers to `.scss` files within the `_sass` directory that define the theme's styles.
+### Running the Site Locally
 
-- `minima.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-- `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
-- `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
-- `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
+#### Basic Development Server
+```bash
+# Standard development server
+bundle exec jekyll serve
 
-### Assets
+# With live reload (recommended)
+bundle exec jekyll serve --livereload
 
-Refers to various asset files within the `assets` directory.
-Contains the `main.scss` that imports sass files from within the `_sass` directory. This `main.scss` is what gets processed into the theme's main stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
+# With drafts enabled
+bundle exec jekyll serve --livereload --drafts
 
-This directory can include sub-directories to manage assets of similar type, and will be copied over as is, to the final transformed site directory.
+# Custom port
+bundle exec jekyll serve --port 4001
 
-### Plugins
+# Production-like build
+JEKYLL_ENV=production bundle exec jekyll serve
+```
 
-Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
+#### Development Server Options
 
-## Usage
+| Flag | Purpose |
+|------|---------|
+| `--livereload` | Auto-refresh browser on changes |
+| `--drafts` | Include posts from `_drafts` folder |
+| `--future` | Show posts with future dates |
+| `--port 4001` | Use custom port |
+| `--host 0.0.0.0` | Allow external connections |
+| `--incremental` | Faster builds (experimental) |
 
-### Home Layout
+### Project Structure
 
-`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
+```
+markhazleton.github.io/
+├── _config.yml              # Site configuration
+├── _posts/                  # Blog posts
+│   └── YYYY-MM-DD-title.md
+├── _drafts/                 # Draft posts (not published)
+├── _layouts/                # Page templates
+│   ├── default.html
+│   ├── home.html
+│   ├── page.html
+│   └── post.html
+├── _includes/               # Reusable components
+│   ├── header.html
+│   ├── footer.html
+│   └── head.html
+├── _sass/                   # Sass stylesheets
+│   └── minima/
+├── assets/                  # Static assets
+│   ├── main.scss
+│   └── images/
+├── .github/
+│   └── workflows/
+│       └── jekyll.yml       # GitHub Actions deployment
+├── Gemfile                  # Ruby dependencies
+├── Gemfile.lock            # Locked dependency versions
+└── README.md               # This file
+```
 
-#### Main Heading and Content-injection
+### Configuration
 
-From Minima v2.2 onwards, the *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
-
-Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
-
-#### Post Listing
-
-This section is optional from Minima v2.2 onwards.<br/>
-It will be automatically included only when your site contains one or more valid posts or drafts (if the site is configured to `show_drafts`).
-
-The title for this section is `Posts` by default and rendered with an `<h2>` tag. You can customize this heading by defining a `list_title` variable in the document's front matter.
-
---
-
-### Customization
-
-To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html`](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
-
-The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](assets/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
-
-- Create a new instance of `main.scss` at site source.
-  - Create a new file `main.scss` at `<your-site>/assets/`
-  - Add the frontmatter dashes, and
-  - Add `@import "minima";`, to `<your-site>/assets/main.scss`
-  - Add your custom CSS.
-- Download the file from this repo
-  - Create  a new file `main.scss` at `<your-site>/assets/`
-  - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
-- Copy directly from Minima 2.0 gem
-  - Go to your local minima gem installation directory ( run `bundle show minima` to get the path to it ).
-  - Copy the `assets/` folder from there into the root of `<your-site>`
-  - Change whatever values you want, inside `<your-site>/assets/main.scss`
-
---
-
-### Customize navigation links
-
-This allows you to set which pages you want to appear in the navigation area and configure order of the links.
-
-For instance, to only link to the `about` and the `portfolio` page, add the following to you `_config.yml`:
+The site configuration is managed in `_config.yml`:
 
 ```yaml
-header_pages:
-  - about.md
-  - portfolio.md
-```
+# Site Identity
+title: Mark Hazleton
+description: Mark Hazleton on GitHub
+url: "https://markhazleton.com"
+author:
+  name: Mark Hazleton
 
---
+# Build Settings
+plugins:
+  - jekyll-feed        # RSS feed generation
+  - jemoji            # GitHub-style emoji support
+  - jekyll-sitemap    # XML sitemap generation
+  - jekyll-seo-tag    # SEO meta tags
 
-### Change default date format
-
-You can change the default date format by specifying `site.minima.date_format`
-in `_config.yml`.
-
-```
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+# Theme Settings
 minima:
-  date_format: "%b %-d, %Y"
+  skin: dark          # Options: classic, dark, auto
+  social_links:
+    twitter: markhazleton
+    github: markhazleton
+    linkedin: markhazleton
+    stackoverflow: "479571"
 ```
 
---
+## 🚀 Deployment & Publishing
 
-### Enabling comments (via Disqus)
+### GitHub Pages Deployment
 
-Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+This site is automatically deployed to GitHub Pages using GitHub Actions:
 
-To enable it, add the following lines to your Jekyll site:
+1. **Source Branch**: `sources` (development branch)
+2. **Deployment Branch**: `gh-pages` (auto-generated)
+3. **Live URL**: https://markhazleton.com
 
+### Deployment Workflow
+
+```mermaid
+graph LR
+    A[Local Development] --> B[Push to sources]
+    B --> C[GitHub Actions]
+    C --> D[Build Jekyll Site]
+    D --> E[Deploy to gh-pages]
+    E --> F[Live Site]
+```
+
+### Manual Deployment (if needed)
+
+```bash
+# Build the site locally
+JEKYLL_ENV=production bundle exec jekyll build
+
+# The built site will be in _site/ directory
+# This is automatically handled by GitHub Actions
+```
+
+## 📝 Content Management
+
+### Writing Drafts
+
+Drafts are stored in the `_drafts` folder and won't be published:
+
+```bash
+# Create a draft (no date in filename)
+touch _drafts/my-draft-post.md
+
+# Preview drafts locally
+bundle exec jekyll serve --drafts
+```
+
+### Managing Categories and Tags
+
+#### Categories
+Use categories for broad content groupings:
+- `updates` - Site updates and announcements
+- `tech` - Technical posts
+- `projects` - Project showcases
+- `thoughts` - Personal reflections
+
+#### Tags
+Use tags for specific topics:
+- `jekyll`, `github-pages`, `web-development`
+- `programming`, `javascript`, `python`
+- `tutorial`, `guide`, `tips`
+
+### Asset Management
+
+#### Images
+Store images in `assets/images/`:
+```markdown
+![Alt text](/assets/images/my-image.jpg)
+```
+
+#### Optimize images before uploading:
+- Use WebP format when possible
+- Compress images (aim for <500KB)
+- Use descriptive filenames
+- Include alt text for accessibility
+
+## 🔧 Customization
+
+### Theme Customization
+
+The site uses a customized Minima theme with:
+- Dark/light mode toggle
+- Custom styling variables
+- Enhanced navigation
+- Social media integration
+
+### Adding Custom Styles
+
+Edit `assets/main.scss` to add custom CSS:
+```scss
+---
+---
+
+@import "minima";
+
+// Your custom styles here
+.custom-class {
+  color: #your-color;
+}
+```
+
+### Custom Layouts
+
+Create new layouts in `_layouts/`:
+```html
+---
+layout: default
+---
+
+<article class="custom-layout">
+  {{ content }}
+</article>
+```
+
+### Adding Plugins
+
+Add plugins to `_config.yml`:
 ```yaml
-  disqus:
-    shortname: my_disqus_shortname
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - your-new-plugin
 ```
 
-You can find out more about Disqus' shortnames [here](https://help.disqus.com/customer/portal/articles/466208).
+Then update `Gemfile`:
+```ruby
+gem "your-new-plugin"
+```
 
-Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+Run `bundle install` to install new plugins.
 
-If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
+## 🔧 Maintenance & Updates
 
---
+### Keeping Dependencies Updated
 
-### Social networks
+Regular maintenance ensures security, performance, and compatibility:
 
-You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config:
+#### Monthly Updates
+```bash
+# Update all gems
+bundle update
 
+# Check for outdated gems
+bundle outdated
+
+# Update specific gem
+bundle update jekyll
+
+# Verify site still works
+bundle exec jekyll serve
+```
+
+#### Security Updates
+```bash
+# Check for security vulnerabilities
+bundle audit
+
+# Update specific vulnerable gems
+bundle update gem-name
+```
+
+#### GitHub Pages Compatibility
+```bash
+# Check GitHub Pages gem versions
+bundle exec github-pages versions
+
+# Update to latest GitHub Pages compatible versions
+bundle update github-pages
+```
+
+### Performance Optimization
+
+#### Image Optimization
+- Use WebP format when possible
+- Compress images before uploading
+- Use responsive images with `srcset`
+- Implement lazy loading for images
+
+#### Build Optimization
+- Enable Sass compression in `_config.yml`:
+  ```yaml
+  sass:
+    style: compressed
+  ```
+- Minimize plugins to essential ones only
+- Use Jekyll's built-in optimization features
+
+### SEO Best Practices
+
+#### Technical SEO
+- XML sitemap (auto-generated)
+- RSS feed (auto-generated)
+- Proper meta tags via `jekyll-seo-tag`
+- Clean URLs and permalink structure
+- Fast loading times
+- Mobile responsiveness
+
+#### Content SEO
+- Descriptive, keyword-rich titles
+- Custom excerpts for meta descriptions
+- Proper heading hierarchy (H1, H2, H3)
+- Internal linking between posts
+- Alt text for all images
+- Schema markup (handled by SEO plugin)
+
+### Accessibility Guidelines
+
+- Use semantic HTML elements
+- Provide alt text for images
+- Ensure sufficient color contrast
+- Make navigation keyboard accessible
+- Use descriptive link text
+- Test with screen readers
+
+## 🤝 Contributing
+
+### Contribution Guidelines
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes**
+4. **Test locally**
+   ```bash
+   bundle exec jekyll serve --livereload
+   ```
+5. **Commit with descriptive messages**
+   ```bash
+   git commit -m "Add: Brief description of changes"
+   ```
+6. **Push and create pull request**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+### Commit Message Conventions
+
+Use conventional commit format:
+- `feat:` New features
+- `fix:` Bug fixes
+- `docs:` Documentation updates
+- `style:` Code style changes
+- `refactor:` Code refactoring
+- `test:` Test additions/updates
+- `chore:` Maintenance tasks
+
+### Code Quality Standards
+
+- Follow Jekyll best practices
+- Use consistent indentation (2 spaces)
+- Write clear, semantic HTML
+- Use BEM methodology for CSS classes
+- Test changes across different browsers
+- Validate HTML and CSS
+
+## 📊 Analytics & Monitoring
+
+### Google Analytics Integration
+
+Add to `_config.yml`:
 ```yaml
-twitter_username: jekyllrb
-github_username:  jekyll
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-googleplus_username: +jekyll
-rss: rss
-
-mastodon:
- - username: jekyll
-   instance: example.com
- - username: jekyll2
-   instance: example.com
+google_analytics: UA-XXXXXXXXX-X
 ```
 
---
+### Performance Monitoring
 
-### Enabling Google Analytics
+Monitor site performance using:
+- Google PageSpeed Insights
+- GTmetrix
+- Lighthouse (built into Chrome DevTools)
+- WebPageTest
 
-To enable Google Analytics, add the following lines to your Jekyll site:
+### Error Monitoring
 
-```yaml
-  google_analytics: UA-NNNNNNNN-N
+- Check GitHub Actions for build failures
+- Monitor 404 errors via Google Search Console
+- Use browser developer tools for client-side errors
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+#### Build Failures
+```bash
+# Clear Jekyll cache
+bundle exec jekyll clean
+
+# Rebuild from scratch
+rm -rf _site .jekyll-cache
+bundle exec jekyll build
+
+# Check for syntax errors
+bundle exec jekyll doctor
 ```
 
-Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+#### Dependency Issues
+```bash
+# Reset bundle
+rm Gemfile.lock
+bundle install
 
---
-
-### Enabling Excerpts on the Home Page
-
-To display post-excerpts on the Home Page, simply add the following to your `_config.yml`:
-
-```yaml
-show_excerpts: true
+# Check Ruby version compatibility
+rbenv versions  # or rvm list
 ```
 
-## Contributing
+#### Local Server Issues
+```bash
+# Kill processes using port 4000
+lsof -ti:4000 | xargs kill
 
-Bug reports and pull requests are welcome on GitHub at <https://github.com/jekyll/minima>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+# Use different port
+bundle exec jekyll serve --port 4001
+```
 
-## Development
+### Getting Help
 
-To set up your environment to develop this theme, run `script/bootstrap`.
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [Minima Theme Documentation](https://github.com/jekyll/minima)
+- [Jekyll Community Forum](https://talk.jekyllrb.com/)
 
-To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+## 📄 License
 
-## License
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+## 🙏 Acknowledgments
+
+- [Jekyll](https://jekyllrb.com/) - Static site generator
+- [Minima](https://github.com/jekyll/minima) - Base theme
+- [GitHub Pages](https://pages.github.com/) - Hosting platform
+- [GitHub Actions](https://github.com/features/actions) - CI/CD pipeline
+
+---
+
+## 📚 Additional Resources
+
+### Learning Resources
+- [Jekyll Step-by-Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Git Handbook](https://guides.github.com/introduction/git-handbook/)
+- [Liquid Template Language](https://shopify.github.io/liquid/)
+
+### Tools & Extensions
+- [VS Code Jekyll Snippets](https://marketplace.visualstudio.com/items?itemName=ginfuru.ginfuru-vscode-jekyll-syntax)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Jekyll Post Generator](https://github.com/jekyll/jekyll-compose)
+
+### Useful Commands Reference
+```bash
+# Quick reference for common Jekyll commands
+bundle exec jekyll serve --livereload    # Development server with auto-reload
+bundle exec jekyll build                 # Build site for production
+bundle exec jekyll clean                 # Clean generated files
+bundle exec jekyll doctor                # Check for issues
+bundle exec jekyll new-theme theme-name  # Create new theme
+bundle install                          # Install dependencies
+bundle update                           # Update dependencies
+bundle exec jekyll --version            # Check Jekyll version
+```
+
+---
+
+*Last updated: July 2025*
