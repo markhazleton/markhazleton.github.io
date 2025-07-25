@@ -1,8 +1,8 @@
 <header class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
   <div class="container">
     <!-- Brand -->
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ "/" | relative_url }}">
-      <i class="bi bi-code-slash me-2 fs-4"></i>
+    <a class="navbar-brand fw-bold d-flex align-items-center site-title" href="{{ "/" | relative_url }}">
+      <i class="bi bi-code-slash me-2 fs-4 blink"></i>
       {{ site.title | escape }}
     </a>
 
@@ -16,17 +16,17 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">
-            <i class="bi bi-house me-1"></i>Home
+            <i class="bi bi-house me-1 sparkle"></i>🏠 Home 🏠
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ "/about/" | relative_url }}">
-            <i class="bi bi-person me-1"></i>About
+            <i class="bi bi-person me-1 sparkle"></i>👤 About 👤
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ "/feed.xml" | relative_url }}">
-            <i class="bi bi-rss me-1"></i>RSS
+            <i class="bi bi-rss me-1 sparkle"></i>📡 RSS 📡
           </a>
         </li>
       </ul>

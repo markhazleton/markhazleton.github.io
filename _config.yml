@@ -1,8 +1,10 @@
 # Site settings
-title: Mark Hazleton
+title: "🚀 MARK'S RADICAL CYBER ZONE 🚀"
 email: "" # Removed email
 description: > # this means to ignore newlines until "baseurl:"
-  Mark Hazleton on GitHub - Software Development, Technology, and Innovation
+  ✨ Welcome to the most AWESOME site in cyberspace! ✨ 
+  🌈 Coding • Hacking • 90s Vibes • Matrix Magic 🌈
+  ⚡ Under Construction Since 1995 ⚡
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://markhazleton.com" # Updated to MarkHazleton.com
 author:

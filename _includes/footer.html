@@ -1,42 +1,53 @@
-<footer class="bg-dark text-light py-5 mt-5">
+<footer class="site-footer bg-dark text-light py-5 mt-5">
   <div class="container">
+    
+    <!-- ULTIMATE 90s FOOTER -->
+    <div class="text-center mb-4">
+      <div class="marquee">
+        <span>🎮 Thanks for visiting the most RADICAL site on the web! 🎮 ✨ Coded with 100% pure HTML magic! ✨ 🌈 Remember to bookmark this page! 🌈 💫 Best viewed with Netscape Navigator! 💫</span>
+      </div>
+    </div>
+    
     <div class="row">
       <!-- About Section -->
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">
-          <i class="bi bi-code-slash me-2"></i>{{ site.title | escape }}
+        <h5 class="fw-bold mb-3 glitch">
+          <i class="bi bi-code-slash me-2 blink"></i>{{ site.title | escape }}
         </h5>
-        <p class="text-light opacity-75">{{ site.description | escape }}</p>
+        <p class="text-light opacity-75 matrix-text">{{ site.description | escape }}</p>
         <p class="text-light opacity-75 mb-0">
-          <i class="bi bi-person me-2"></i>
+          <i class="bi bi-person me-2 sparkle"></i>
           {%- if site.author.name -%}
-            {{ site.author.name | escape }}
+            {{ site.author.name | escape }} 🚀
           {%- else -%}
-            {{ site.title | escape }}
+            {{ site.title | escape }} 🚀
           {%- endif -%}
         </p>
       </div>
 
       <!-- Quick Links -->
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">
-          <i class="bi bi-link-45deg me-2"></i>Quick Links
+        <h5 class="fw-bold mb-3 glitch">
+          <i class="bi bi-link-45deg me-2 blink"></i>🔗 Quick Links 🔗
         </h5>
         <ul class="list-unstyled">
           <li class="mb-2">
             <a href="{{ "/" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-house me-2"></i>Home
+              <i class="bi bi-house me-2 sparkle"></i>🏠 Home
             </a>
           </li>
           <li class="mb-2">
             <a href="{{ "/about/" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-person me-2"></i>About
+              <i class="bi bi-person me-2 sparkle"></i>👤 About
             </a>
           </li>
           <li class="mb-2">
             <a href="{{ "/feed.xml" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-rss me-2"></i>RSS Feed
+              <i class="bi bi-rss me-2 sparkle"></i>📡 RSS Feed
             </a>
+          </li>
+          <li class="mb-2 blink">
+            <span class="text-warning">🚧 Guestbook (Coming Soon!) 🚧</span>
           </li>
         </ul>
       </div>
