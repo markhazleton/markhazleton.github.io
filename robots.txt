@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Allow search engines to crawl our chaos
+Allow: /assets/css/chaos.css
+Allow: /assets/js/chaos.js
+Allow: /_posts/
+Allow: /web-design/
+Allow: /chaos/
+Allow: /ai-madness/
+
+# Sitemap location
+Sitemap: https://markhazleton.com/sitemap.xml
+
+# Special instructions for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Please don't break from the chaos
+Crawl-delay: 1

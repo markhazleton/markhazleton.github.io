@@ -5,11 +5,26 @@ description: > # this means to ignore newlines until "baseurl:"
   ✨ Welcome to the most AWESOME site in cyberspace! ✨ 
   🌈 Coding • Hacking • 90s Vibes • Matrix Magic 🌈
   ⚡ Under Construction Since 1995 ⚡
+  Mark Hazleton's chaotic journey through AI-powered web development,
+  featuring Matrix rain effects, rainbow animations, and enough 90s nostalgia
+  to power a small rave. Explore cutting-edge chaos engineering!
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://markhazleton.com" # Updated to MarkHazleton.com
 author:
   name: Mark Hazleton
   email: "" # Removed email
+  bio: "Software Architect turned Chaos Engineer. Creator of the most beautifully ridiculous websites in cyberspace."
+  location: "The Matrix"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/markhazleton"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/markhazleton"
+    - label: "LinkedIn"  
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/markhazleton"
 
 # Build settings
 theme: null
@@ -18,6 +33,42 @@ plugins:
   - jemoji
   - jekyll-sitemap # Add a sitemap generator for better SEO
   - jekyll-seo-tag # Enhance metadata for SEO
+  - jekyll-redirect-from
+  - jekyll-archives
+
+# Jekyll Archives for category/tag pages
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# SEO and Social Media
+twitter:
+  username: markhazleton
+  card: summary_large_image
+
+facebook:
+  app_id: # Add if you have one
+  publisher: # Add if you have one
+
+social:
+  name: Mark Hazleton
+  links:
+    - https://twitter.com/markhazleton
+    - https://github.com/markhazleton
+    - https://linkedin.com/in/markhazleton
+    - https://stackoverflow.com/users/479571
+
+# Google Analytics (if you have it)
+google_analytics: # Add your GA4 tracking ID if available
+
+# Search Engine Verification
+google_site_verification: # Add your Google Search Console verification
+bing_site_verification: # Add your Bing Webmaster verification
 
 # Remote theme
 remote_theme: null

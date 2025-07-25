@@ -1,12 +1,31 @@
 ---
 layout: page
-title: About
+title: "🚀 About This Beautiful Digital Disaster 🚀"
 permalink: /about/
+description: "Meet Mark Hazleton, Software Architect turned Chaos Engineer. Creator of the most beautifully ridiculous websites in cyberspace, featuring AI-powered Matrix rain effects and enough 90s nostalgia to power a small rave."
+keywords: "Mark Hazleton, Software Architect, Chaos Engineering, AI Web Development, 90s Web Design, Matrix Effects, Creative Coding, Jekyll Blog"
+image: "/assets/images/about-chaos-mode.jpg"
 ---
+
+<!-- CHAOS ABOUT BANNER -->
+<div class="construction-banner neon-border mb-4">
+  <h2 class="blink">👨‍💻 MEET THE MAD SCIENTIST BEHIND THE CHAOS! 👨‍💻</h2>
+  <div class="marquee">
+    <span>🧪 Software Architect by day, Digital Chaos Engineer by night! 🧪 ⚡ Creating beautiful disasters since 1995! ⚡</span>
+  </div>
+</div>
+
+## Welcome to My Digital Laboratory 🧬
+
+<div class="neon-border">
+  <p class="lead glitch">Greetings, fellow travelers of the **information superhighway**! I'm <strong>Mark Hazleton</strong>, and this is my corner of cyberspace where **professional web development** meets **absolute digital madness**.</p>
+</div>
 
 ## About Mark Hazleton
 
-Mark Hazleton is a seasoned Solutions Architect with a passion for creating technology solutions that drive business success. With extensive experience in both on-premises and cloud-based environments, Mark has worked with organizations of all sizes, from small businesses to large enterprises. His approach focuses on delivering tangible benefits while avoiding unnecessary complexity or "sizzle" that does not add value.
+Mark Hazleton is a seasoned **Solutions Architect** with a passion for creating technology solutions that drive business success. With extensive experience in both on-premises and cloud-based environments, Mark has worked with organizations of all sizes, from small businesses to large enterprises. His approach focuses on delivering tangible benefits while avoiding unnecessary complexity or "sizzle" that does not add value.
+
+But sometimes... sometimes you need to embrace the sizzle and let **chaos** reign supreme! 🚀
 
 Mark's expertise spans a wide range of technologies, including Microsoft Azure, .NET, Docker, and more. He is also an advocate for lifelong learning, continuously expanding his knowledge to stay ahead in the ever-evolving tech landscape. Outside of work, Mark enjoys hiking, exploring cities, and experimenting with outdoor cooking techniques.
 
