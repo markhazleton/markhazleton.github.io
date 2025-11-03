@@ -1,45 +1,31 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
-
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size:   16px !default;
+// Modern, clean design variables
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$base-font-size:   17px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.6 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     32px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$text-color:       #2c3e50 !default;
+$background-color: #ffffff !default;
+$brand-color:      #3498db !default;
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color:       #7f8c8d !default;
+$grey-color-light: #ecf0f1 !default;
+$grey-color-dark:  #34495e !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    900px !default;
 
 $on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-laptop:        900px !default;
 
-$primary-color: #6200ea;
-$secondary-color: #03dac6;
-$background-light: #ffffff;
-$background-dark: #121212;
-$text-light: #000000;
-$text-dark: #ffffff;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
+// Use media queries
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -50,52 +36,187 @@ $text-dark: #ffffff;
   font-size: $base-font-size * $ratio;
 }
 
+// Modern CSS variables for theming
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #ff9800; /* Orange */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --accent-primary: #3498db;
+  --accent-hover: #2980b9;
+  --border-color: #e1e4e8;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --code-bg: #f6f8fa;
 }
 
 [data-theme="dark"] {
-  --background-color: #000000;
-  --text-color: #ffffff;
-  --primary-color: #ff9800; /* Orange */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #e4e6eb;
+  --text-secondary: #b0b3b8;
+  --accent-primary: #5dade2;
+  --accent-hover: #3498db;
+  --border-color: #3a3a3a;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --code-bg: #2d2d2d;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
-header.site-header, footer.site-footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+// Modern header styling
+header.site-header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    
+    &:hover {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+  }
+  
+  .site-nav {
+    .page-link {
+      color: var(--text-primary);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: var(--accent-primary);
+        background-color: var(--bg-secondary);
+      }
+    }
+  }
 }
 
+// Modern footer styling
+footer.site-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+// Clean main content area
 main.page-content {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  padding: 20px;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-primary);
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
 }
 
+// Modern theme switcher button
 button.theme-switcher {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
-  padding: 10px;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  
+  &:hover {
+    background-color: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+  }
 }
 
-button.theme-switcher:hover {
-  background-color: rgba(255, 152, 0, 0.8); /* Slightly darker orange for hover effect */
+// Modern post styling
+.post {
+  &-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+  
+  &-content {
+    color: var(--text-primary);
+    
+    h2, h3, h4 {
+      color: var(--text-primary);
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+    
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+      
+      &:hover {
+        border-bottom-color: var(--accent-primary);
+      }
+    }
+    
+    code {
+      background-color: var(--code-bg);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: var(--text-primary);
+    }
+    
+    pre {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+  }
+}
+
+// Modern post list
+.post-list {
+  &-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
+  
+  &-heading {
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 600;
+      
+      &:hover {
+        color: var(--accent-primary);
+      }
+    }
+  }
 }
 
 // Import partials.
