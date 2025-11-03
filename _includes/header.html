@@ -1,8 +1,8 @@
 <header class="site-header" role="banner">
+
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     <button class="theme-switcher" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -42,8 +42,6 @@
     
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    
-    // Update icon
     icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   }
 
@@ -51,7 +49,7 @@
   (function() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'dark'); // Default to dark
+    const theme = savedTheme || (prefersDark ? 'dark' : 'dark');
     
     document.documentElement.setAttribute('data-theme', theme);
     

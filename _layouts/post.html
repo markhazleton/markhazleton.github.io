@@ -1,165 +1,27 @@
 ---
 layout: default
 ---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="container py-5">
-  <!-- CHAOS POST BANNER -->
-  <div class="construction-banner neon-border mb-4">
-    <h2 class="blink">📖 READING A TOTALLY RADICAL BLOG POST! 📖</h2>
-    <div class="marquee">
-      <span>🌟 You're about to read some AWESOME content! 🌟 ✨ Prepare for knowledge overload! ✨ 🚀 This post is dynamically enhanced with chaos! 🚀</span>
-    </div>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
   </div>
-  
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <article class="post h-entry neon-border rotate-1" itemscope itemtype="http://schema.org/BlogPosting">
-        
-        <!-- Post Header -->
-        <header class="post-header mb-5">
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb" class="mb-3">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="{{ "/" | relative_url }}" class="text-decoration-none">
-                  <i class="bi bi-house me-1 sparkle"></i>🏠 Home
-                </a>
-              </li>
-              <li class="breadcrumb-item active blink" aria-current="page">
-                <i class="bi bi-file-text me-1 sparkle"></i>📄 Post
-              </li>
-            </ol>
-          </nav>
 
-          <!-- Post Title -->
-          <h1 class="post-title display-5 fw-bold mb-4 p-name glitch" itemprop="name headline">
-            🌟 {{ page.title | escape }} 🌟
-          </h1>
-          
-          <!-- Post Meta -->
-          <div class="post-meta d-flex flex-wrap align-items-center gap-4 mb-4 pb-4 border-bottom">
-            <div class="d-flex align-items-center">
-              <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-2">
-                <i class="bi bi-calendar3 text-primary"></i>
-              </div>
-              <div>
-                <small class="text-muted d-block">Published</small>
-                <time class="dt-published fw-semibold" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                  {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
-                  {{ page.date | date: date_format }}
-                </time>
-              </div>
-            </div>
-            
-            {%- if page.author -%}
-            <div class="d-flex align-items-center">
-              <div class="bg-success bg-opacity-10 rounded-circle p-2 me-2">
-                <i class="bi bi-person text-success"></i>
-              </div>
-              <div>
-                <small class="text-muted d-block">Author</small>
-                <span class="fw-semibold p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                  <span itemprop="name">{{ page.author }}</span>
-                </span>
-              </div>
-            </div>
-            {%- endif -%}
-            
-            <div class="d-flex align-items-center">
-              <div class="bg-info bg-opacity-10 rounded-circle p-2 me-2">
-                <i class="bi bi-clock text-info"></i>
-              </div>
-              <div>
-                <small class="text-muted d-block">Reading time</small>
-                <span class="fw-semibold">{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
-              </div>
-            </div>
-            
-            {%- if page.categories.size > 0 -%}
-            <div class="d-flex align-items-center">
-              <div class="bg-warning bg-opacity-10 rounded-circle p-2 me-2">
-                <i class="bi bi-tags text-warning"></i>
-              </div>
-              <div>
-                <small class="text-muted d-block">Categories</small>
-                <div class="d-flex flex-wrap gap-1">
-                  {%- for category in page.categories -%}
-                    <span class="badge bg-secondary bg-opacity-10 text-secondary">{{ category }}</span>
-                  {%- endfor -%}
-                </div>
-              </div>
-            </div>
-            {%- endif -%}
-          </div>
-        </header>
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
 
-        <!-- Post Content -->
-        <div class="post-content e-content" itemprop="articleBody">
-          {{ content }}
-        </div>
-
-        <!-- Post Footer -->
-        <footer class="post-footer mt-5 pt-4 border-top">
-          <div class="row">
-            <div class="col-md-6">
-              <h6 class="fw-bold mb-3">
-                <i class="bi bi-share me-2"></i>Share this post
-              </h6>
-              <div class="d-flex gap-2">
-                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn-outline-primary btn-sm">
-                  <i class="bi bi-twitter me-1"></i>Twitter
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn-outline-primary btn-sm">
-                  <i class="bi bi-linkedin me-1"></i>LinkedIn
-                </a>
-                <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')">
-                  <i class="bi bi-link-45deg me-1"></i>Copy Link
-                </button>
-              </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-              <a href="{{ "/" | relative_url }}" class="btn btn-primary">
-                <i class="bi bi-arrow-left me-2"></i>Back to Posts
-              </a>
-            </div>
-          </div>
-        </footer>
-
-        {%- if site.disqus.shortname -%}
-          <div class="mt-5">
-            {%- include disqus_comments.html -%}
-          </div>
-        {%- endif -%}
-
-        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-      </article>
-    </div>
-  </div>
-</div>
-
-<script>
-  function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(function() {
-      // Show success feedback
-      const button = event.target.closest('button');
-      const originalText = button.innerHTML;
-      button.innerHTML = '<i class="bi bi-check me-1"></i>Copied!';
-      button.classList.remove('btn-outline-secondary');
-      button.classList.add('btn-success');
-      
-      setTimeout(() => {
-        button.innerHTML = originalText;
-        button.classList.remove('btn-success');
-        button.classList.add('btn-outline-secondary');
-      }, 2000);
-    }).catch(function(err) {
-      console.error('Could not copy text: ', err);
-    });
-  }
-</script>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

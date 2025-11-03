@@ -1,119 +1,35 @@
-<footer class="site-footer bg-dark text-light py-5 mt-5">
-  <div class="container">
-    
-    <!-- ULTIMATE 90s FOOTER -->
-    <div class="text-center mb-4">
-      <div class="marquee">
-        <span>🎮 Thanks for visiting the most RADICAL site on the web! 🎮 ✨ Coded with 100% pure HTML magic! ✨ 🌈 Remember to bookmark this page! 🌈 💫 Best viewed with Netscape Navigator! 💫</span>
-      </div>
-    </div>
-    
-    <div class="row">
-      <!-- About Section -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3 glitch">
-          <i class="bi bi-code-slash me-2 blink"></i>{{ site.title | escape }}
-        </h5>
-        <p class="text-light opacity-75 matrix-text">{{ site.description | escape }}</p>
-        <p class="text-light opacity-75 mb-0">
-          <i class="bi bi-person me-2 sparkle"></i>
-          {%- if site.author.name -%}
-            {{ site.author.name | escape }} 🚀
-          {%- else -%}
-            {{ site.title | escape }} 🚀
-          {%- endif -%}
-        </p>
-      </div>
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3 glitch">
-          <i class="bi bi-link-45deg me-2 blink"></i>🔗 Quick Links 🔗
-        </h5>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="{{ "/" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-house me-2 sparkle"></i>🏠 Home
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="{{ "/about/" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-person me-2 sparkle"></i>👤 About
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="{{ "/feed.xml" | relative_url }}" class="text-light text-decoration-none opacity-75 hover-opacity-100">
-              <i class="bi bi-rss me-2 sparkle"></i>📡 RSS Feed
-            </a>
-          </li>
-          <li class="mb-2 blink">
-            <span class="text-warning">🚧 Guestbook (Coming Soon!) 🚧</span>
-          </li>
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+            </li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif -%}
         </ul>
       </div>
 
-      <!-- Social & Contact -->
-      <div class="col-md-4 mb-4">
-        <h5 class="fw-bold mb-3">
-          <i class="bi bi-share me-2"></i>Connect
-        </h5>
-        <div class="d-flex flex-wrap gap-3 mb-3">
-          {%- if site.minima.social_links.github -%}
-          <a href="https://github.com/{{ site.minima.social_links.github }}" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="text-light fs-4 hover-scale"
-             title="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
-          {%- endif -%}
-          {%- if site.minima.social_links.twitter -%}
-          <a href="https://twitter.com/{{ site.minima.social_links.twitter }}" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="text-light fs-4 hover-scale"
-             title="Twitter">
-            <i class="bi bi-twitter"></i>
-          </a>
-          {%- endif -%}
-          {%- if site.minima.social_links.linkedin -%}
-          <a href="https://linkedin.com/in/{{ site.minima.social_links.linkedin }}" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="text-light fs-4 hover-scale"
-             title="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          {%- endif -%}
-          {%- if site.minima.social_links.stackoverflow -%}
-          <a href="https://stackoverflow.com/users/{{ site.minima.social_links.stackoverflow }}" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="text-light fs-4 hover-scale"
-             title="Stack Overflow">
-            <i class="bi bi-stack-overflow"></i>
-          </a>
-          {%- endif -%}
-        </div>
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
       </div>
     </div>
 
-    <!-- Copyright Section -->
-    <hr class="my-4 opacity-25">
-    <div class="row">
-      <div class="col-md-6">
-        <p class="text-light opacity-75 mb-0">
-          <i class="bi bi-c-circle me-1"></i>
-          {{ "now" | date: "%Y" }} {{ site.title | escape }}. All rights reserved.
-        </p>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <p class="text-light opacity-75 mb-0">
-          <i class="bi bi-heart-fill me-1 text-danger"></i>
-          Built with <a href="https://jekyllrb.com/" class="text-light text-decoration-none fw-bold" target="_blank" rel="noopener noreferrer">Jekyll</a> 
-          & <a href="https://getbootstrap.com/" class="text-light text-decoration-none fw-bold" target="_blank" rel="noopener noreferrer">Bootstrap</a>
-        </p>
-      </div>
-    </div>
   </div>
+
 </footer>
