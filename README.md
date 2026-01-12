@@ -1,19 +1,20 @@
 # Mark Hazleton's Personal Jekyll Site
 
 [![Deploy Jekyll site to Pages](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml)
-[![Ruby](https://img.shields.io/badge/Ruby-3.2-red.svg)](https://www.ruby-lang.org/)
-[![Jekyll](https://img.shields.io/badge/Jekyll-4.3-blue.svg)](https://jekyllrb.com/)
+[![Ruby](https://img.shields.io/badge/Ruby-3.2.2-red.svg)](https://www.ruby-lang.org/)
+[![Jekyll](https://img.shields.io/badge/Jekyll-3.10.0-blue.svg)](https://jekyllrb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is Mark Hazleton's personal website built with Jekyll and hosted on GitHub Pages. The site uses a customized version of the Minima theme with dark/light mode toggle and modern styling.
+This is Mark Hazleton's personal website built with Jekyll and hosted on GitHub Pages. The site uses a customized Minima theme with custom layouts, includes, and CSS. Features include a dark/light mode toggle, emoji support, and modern styling without external frameworks.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Ruby 3.2 or higher
-- Bundler gem
+- Ruby 3.2.2 or higher
+- Bundler gem (latest)
 - Git
+- Windows: Recommended for development (wdm gem included)
 
 ### Local Development Setup
 
@@ -174,10 +175,10 @@ Check deployment status at: [Actions tab](https://github.com/markhazleton/markha
 
 | Component | Version | Purpose |
 |-----------|---------|---------|
-| Ruby | 3.2+ | Jekyll runtime |
+| Ruby | 3.2.2+ | Jekyll runtime |
 | Bundler | Latest | Dependency management |
 | Git | Latest | Version control |
-| Node.js | 16+ (optional) | Asset processing |
+| Jekyll | 3.10.0 | Static site generator (via github-pages gem) |
 
 ### Development Environment Setup
 
@@ -296,12 +297,16 @@ The site configuration is managed in `_config.yml`:
 ```yaml
 # Site Identity
 title: Mark Hazleton
-description: Mark Hazleton on GitHub
+description: Solutions Architect | Technology Leader | Lifelong Learner
+baseurl: "/"
 url: "https://markhazleton.com"
 author:
   name: Mark Hazleton
+  email: ""  # Intentionally blank for privacy
 
 # Build Settings
+theme: null            # Not using theme gem
+remote_theme: null     # Custom implementation
 plugins:
   - jekyll-feed        # RSS feed generation
   - jemoji            # GitHub-style emoji support
@@ -310,12 +315,16 @@ plugins:
 
 # Theme Settings
 minima:
-  skin: dark          # Options: classic, dark, auto
+  skin: auto          # Responsive to system preference
   social_links:
     twitter: markhazleton
     github: markhazleton
     linkedin: markhazleton
     stackoverflow: "479571"
+
+# Sass
+sass:
+  style: compressed   # Production optimization
 ```
 
 ## 🚀 Deployment & Publishing
@@ -325,8 +334,9 @@ minima:
 This site is automatically deployed to GitHub Pages using GitHub Actions:
 
 1. **Source Branch**: `sources` (development branch)
-2. **Deployment Branch**: `gh-pages` (auto-generated)
+2. **Deployment Branch**: `gh-pages` (auto-generated, never commit directly)
 3. **Live URL**: https://markhazleton.com
+4. **Jekyll Version**: 3.10.0 (via github-pages gem for compatibility)
 
 ### Deployment Workflow
 
@@ -396,26 +406,39 @@ Store images in `assets/images/`:
 
 ### Theme Customization
 
-The site uses a customized Minima theme with:
-- Dark/light mode toggle
-- Custom styling variables
-- Enhanced navigation
-- Social media integration
+The site uses a customized Minima theme implementation with:
+- Custom layouts in `_layouts/` (not from theme gem)
+- Custom includes in `_includes/` for header, footer, head
+- Dark/light mode toggle with localStorage persistence
+- Emoji-based icons (via jemoji plugin)
+- Custom CSS in `assets/css/style.css` with Bootstrap-inspired utilities
+- Theme switcher JavaScript inline in header
+- Social media integration via Minima configuration
 
 ### Adding Custom Styles
 
-Edit `assets/main.scss` to add custom CSS:
+**Option 1:** Edit `assets/css/style.css` for standalone CSS:
+```css
+/* Add your custom styles */
+.custom-class {
+  color: #your-color;
+}
+```
+
+**Option 2:** Edit `assets/main.scss` to add Sass:
 ```scss
 ---
 ---
 
 @import "minima";
 
-// Your custom styles here
+// Your custom Sass here
 .custom-class {
   color: #your-color;
 }
 ```
+
+**Note:** Current implementation uses standalone CSS (`style.css`) with CSS custom properties, not generated from Sass.
 
 ### Custom Layouts
 
@@ -484,8 +507,13 @@ bundle update gem-name
 bundle exec github-pages versions
 
 # Update to latest GitHub Pages compatible versions
-bundle update github-pages
+bundle update
+
+# Verify Jekyll version (should be 3.10.0 for GitHub Pages)
+bundle exec jekyll --version
 ```
+
+**Important:** The `github-pages` gem pins Jekyll to 3.10.0 and many other gems to specific versions. This ensures your local build matches GitHub's deployment environment exactly. Many gems will appear "outdated" in `bundle outdated` - this is intentional and correct.
 
 ### Performance Optimization
 
@@ -647,9 +675,11 @@ This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.t
 ## 🙏 Acknowledgments
 
 - [Jekyll](https://jekyllrb.com/) - Static site generator
-- [Minima](https://github.com/jekyll/minima) - Base theme
+- [Minima](https://github.com/jekyll/minima) - Base theme inspiration
 - [GitHub Pages](https://pages.github.com/) - Hosting platform
 - [GitHub Actions](https://github.com/features/actions) - CI/CD pipeline
+- [jemoji](https://github.com/jekyll/jemoji) - Emoji support plugin
+- [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) - SEO optimization
 
 ---
 
@@ -681,4 +711,4 @@ bundle exec jekyll --version            # Check Jekyll version
 
 ---
 
-*Last updated: July 2025*
+*Last updated: January 2026*
