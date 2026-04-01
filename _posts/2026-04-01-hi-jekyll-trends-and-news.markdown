@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hi! Jekyll Platform Trends and News for 2026"
-date: 2026-04-01 10:00:00 +0000
+date: 2026-04-01 06:00:00 -0500
 categories: [updates, development]
 tags: [jekyll, github-pages, ruby, static-site-generators, bootstrap]
 author: Mark Hazleton
