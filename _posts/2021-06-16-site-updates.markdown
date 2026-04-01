@@ -2,7 +2,10 @@
 layout: post
 title: "Site Updates"
 date: 2021-06-16 08:26:16 -0500
-categories: jekyll update
+categories: [jekyll, update]
+tags: [jekyll, github-pages, configuration]
+author: Mark Hazleton
+excerpt: "Learning to configure Jekyll and GitHub.io publishing, including config.yml exclusions and build settings."
 ---
 
 Making some updates to the site as I learn more about jekyll and GitHub.io publishing

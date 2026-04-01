@@ -36,21 +36,23 @@
 <script>
   function toggleTheme() {
     const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
+    const currentTheme = html.getAttribute('data-bs-theme') || html.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     const icon = document.querySelector('.theme-icon');
     
+    html.setAttribute('data-bs-theme', newTheme);
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   }
 
-  // Initialize theme on page load - default to dark
+  // Initialize theme on page load
   (function() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'dark');
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
     
+    document.documentElement.setAttribute('data-bs-theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
     
     const icon = document.querySelector('.theme-icon');

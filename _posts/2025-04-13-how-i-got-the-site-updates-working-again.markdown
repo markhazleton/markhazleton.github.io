@@ -3,6 +3,9 @@ layout: post
 title: "How I Got the Site Updates Working Again"
 date: 2025-04-13 12:00:00 +0000
 categories: [updates, troubleshooting]
+tags: [github-actions, ruby, bundler, github-pages, troubleshooting]
+author: Mark Hazleton
+excerpt: "Fixing GitHub Pages deployment issues caused by platform mismatches and Ruby version incompatibilities in GitHub Actions."
 ---
 
 After encountering some issues with my GitHub Pages site not updating properly, I decided to document the steps I took to resolve the problem. This post serves as a guide for anyone facing similar challenges.

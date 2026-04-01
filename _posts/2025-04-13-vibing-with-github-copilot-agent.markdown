@@ -2,7 +2,10 @@
 layout: post
 title: "Vibing With GitHub Co-Pilot Agent"
 date: 2025-04-13 10:00:00 +0000
-categories: updates
+categories: [updates]
+tags: [github-copilot, ai, theme, dark-mode, css]
+author: Mark Hazleton
+excerpt: "Exploring GitHub Copilot Agent capabilities and implementing a modern material-like theme with light/dark mode toggle."
 ---
 
 Exploring the capabilities of GitHub Co-Pilot Agent has been an exciting journey. This tool has proven to be a game-changer in enhancing productivity and streamlining development workflows.

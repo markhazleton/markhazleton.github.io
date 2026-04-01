@@ -3,26 +3,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author.name -%}
-              {{ site.author.name | escape }}
-            {%- elsif site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.author.email and site.author.email != "" -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-            {%- elsif site.email and site.email != "" -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
+        <h2 class="footer-heading">
+          <a href="https://markhazleton.com">{{ site.title | escape }}</a>
+        </h2>
+        <p>{{- site.description | escape -}}</p>
       </div>
 
       <div class="footer-col footer-col-2">
@@ -30,7 +16,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        <p>Visit my main site at <a href="https://markhazleton.com">markhazleton.com</a> for more about my work in solutions architecture, cloud development, and technology leadership.</p>
       </div>
     </div>
 

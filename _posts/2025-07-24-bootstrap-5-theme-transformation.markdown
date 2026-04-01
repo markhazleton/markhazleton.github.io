@@ -2,9 +2,10 @@
 layout: post
 title: "Bootstrap 5 Theme Transformation: A Modern Makeover"
 date: 2025-07-24 10:00:00 +0000
-categories: updates development
+categories: [updates, development]
 tags: [bootstrap, design, theme, icons, jekyll]
 author: Mark Hazleton
+excerpt: "A complete transformation to Bootstrap 5 with Bootstrap Icons integration — a comprehensive redesign bringing the site into the modern web era."
 ---
 
 I'm excited to share a major milestone in the evolution of this site - a complete transformation to a modern Bootstrap 5 theme with beautiful Bootstrap Icons integration! This wasn't just a simple theme change; it was a comprehensive redesign that brings the site into the modern web era while maintaining its core identity.

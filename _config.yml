@@ -9,6 +9,13 @@ author:
   name: Mark Hazleton
   email: "" # Removed email
 
+show_excerpts: true
+
+# Social links (flat format for social.html include)
+github_username: markhazleton
+linkedin_username: markhazleton
+stackoverflow_id: "479571"
+
 # Build settings
 theme: null
 plugins:
@@ -23,11 +30,7 @@ remote_theme: null
 # Minima theme settings
 minima:
   skin: auto
-  social_links:
-    twitter: markhazleton
-    github: markhazleton
-    linkedin: markhazleton
-    stackoverflow: "479571"
+  date_format: "%b %-d, %Y"
 
 # Exclusions
 exclude:
