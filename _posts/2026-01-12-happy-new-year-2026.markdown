@@ -65,4 +65,4 @@ This blog serves as both a personal platform and a testing ground for modern Jek
 
 ---
 
-*Site built with Jekyll 3.10.0, deployed via GitHub Pages from the `sources` branch to [markhazleton.com](https://markhazleton.com)*
+*Site built with Jekyll 3.10.0, deployed via GitHub Pages from the `sources` branch to [simpleblog.makeboldspark.com](https://simpleblog.makeboldspark.com)*

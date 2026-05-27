@@ -21,7 +21,7 @@ og:
   title: "🚀 I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History 🌈"
   description: "A hilarious journey through AI-powered web design chaos featuring Matrix effects, rainbow animations, and enough 90s nostalgia to power a small rave."
   image: "/assets/images/chaos-mode-social.jpg"
-  url: "https://markhazleton.com/web-design/chaos/ai-madness/2025/07/24/unleashing-maximum-chaos-web-design.html"
+  url: "https://simpleblog.makeboldspark.com/web-design/chaos/ai-madness/2025/07/24/unleashing-maximum-chaos-web-design.html"
 schema:
   type: "BlogPosting"
   headline: "I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History"

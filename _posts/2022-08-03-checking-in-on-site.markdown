@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Checking In on MarkHazleton on GitHub"
+title: "Still Here"
 date: 2022-08-03 19:26:16 -0500
-categories: [jekyll, update]
+categories: [updates]
 tags: [jekyll, github-pages, site-update]
 author: Mark Hazleton
-excerpt: "A quick check-in to make sure the Jekyll publishing workflow is still running smoothly."
+excerpt: "Checking in after a long gap. The site still works, Jekyll still builds, and I still have opinions about things."
 ---
 
-Just wanted to do a quick update, to make sure I still knew how this works.
+It's been over a year since the last post. The site still builds. Jekyll still works. GitHub Pages is still free.
 
-[Mark Hazleton Website](https://markhazleton.com)
+Not much to report beyond that — this is one of those "I just wanted to make sure I still know how this works" posts.
+If you're here, hello. More actual content eventually.
