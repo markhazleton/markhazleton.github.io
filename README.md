@@ -1,11 +1,18 @@
-# Mark Hazleton's Personal Jekyll Site
+# SimpleBlog — Mark Hazleton's Personal Jekyll Site
 
 [![Deploy Jekyll site to Pages](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/markhazleton/markhazleton.github.io/actions/workflows/jekyll.yml)
 [![Ruby](https://img.shields.io/badge/Ruby-3.2.2-red.svg)](https://www.ruby-lang.org/)
 [![Jekyll](https://img.shields.io/badge/Jekyll-3.10.0-blue.svg)](https://jekyllrb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is Mark Hazleton's personal website built with Jekyll and hosted on GitHub Pages. The site uses a customized Minima theme with custom layouts, includes, and CSS. Features include a dark/light mode toggle, emoji support, and modern styling without external frameworks.
+**Live Site**: [https://simpleblog.makeboldspark.com](https://simpleblog.makeboldspark.com)
+
+## About
+
+SimpleBlog is Mark Hazleton's personal website built with Jekyll and hosted on GitHub Pages. The site uses a customized Minima theme with custom layouts, includes, and CSS. Features include a dark/light mode toggle, emoji support, and modern styling without external frameworks.
+
+> Built by [Mark Hazleton](https://markhazleton.com) — Mark Hazleton, Solutions Architect
+> SimpleBlog is part of the [Make Bold Spark](https://makeboldspark.com) portfolio of technical demonstrations.
 
 ## 🚀 Quick Start
 
@@ -606,10 +613,7 @@ Use conventional commit format:
 
 ### Google Analytics Integration
 
-Add to `_config.yml`:
-```yaml
-google_analytics: UA-XXXXXXXXX-X
-```
+GA4 tracking (Make Bold Spark, `G-RY77Z11S9E`) is active via `_includes/google-analytics.html`, included in every page through `_includes/head.html`.
 
 ### Performance Monitoring
 
