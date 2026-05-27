@@ -4,7 +4,7 @@ email: "" # Removed email
 description: > # this means to ignore newlines until "baseurl:"
   Solutions Architect | Technology Leader | Lifelong Learner
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://markhazleton.com" # Updated to MarkHazleton.com
+url: "https://simpleblog.makeboldspark.com"
 author:
   name: Mark Hazleton
   email: "" # Removed email
