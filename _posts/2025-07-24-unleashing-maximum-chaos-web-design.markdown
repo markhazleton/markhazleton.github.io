@@ -1,35 +1,11 @@
 ---
 layout: post
-title: "🚀 I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History 🌈"
+title: "I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History"
 date: 2025-07-24 15:30:00 -0500
-categories: web-design chaos ai-madness frontend-development jekyll
-tags: [ai, web-design, chaos-engineering, 90s-nostalgia, matrix-effects, rainbow-css, github-copilot, jekyll-blog, frontend-fun, css-animations, javascript-madness, retro-web, digital-art, creative-coding, web-development]
+categories: [web-design, development]
+tags: [ai, web-design, github-copilot, css-animations, jekyll]
 author: Mark Hazleton
-excerpt: "What happens when you tell GitHub Copilot to 'go full chaos and crazy'? You get a glorious 90s nostalgia explosion mixed with Matrix effects and enough rainbow animations to power a small rave. This is the story of how I accidentally created the most beautifully ridiculous website ever."
-description: "A hilarious deep-dive into what happens when AI meets web design chaos. Learn how GitHub Copilot transformed a professional Jekyll blog into a 90s nostalgia explosion complete with Matrix rain, rainbow animations, and Konami code easter eggs."
-keywords: "AI web design, GitHub Copilot, chaos engineering, 90s web design, Matrix effects, CSS animations, JavaScript easter eggs, retro web development, creative coding, Jekyll blog"
-image: "/assets/images/chaos-mode-social.jpg"
-twitter:
-  card: summary_large_image
-  site: "@markhazleton"
-  creator: "@markhazleton"
-  title: "🚀 AI Created the Most Beautiful Web Disaster in History 🌈"
-  description: "What happens when you tell GitHub Copilot to 'go full chaos'? Matrix rain, rainbow text, and 90s nostalgia explosions!"
-  image: "/assets/images/chaos-mode-social.jpg"
-og:
-  type: article
-  title: "🚀 I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History 🌈"
-  description: "A hilarious journey through AI-powered web design chaos featuring Matrix effects, rainbow animations, and enough 90s nostalgia to power a small rave."
-  image: "/assets/images/chaos-mode-social.jpg"
-  url: "https://simpleblog.makeboldspark.com/web-design/chaos/ai-madness/2025/07/24/unleashing-maximum-chaos-web-design.html"
-schema:
-  type: "BlogPosting"
-  headline: "I Asked AI to Go Full Chaos Mode and Accidentally Created the Most Beautiful Disaster in Web History"
-  datePublished: "2025-07-24T15:30:00-05:00"
-  dateModified: "2025-07-24T15:30:00-05:00"
-  wordCount: 1200
-  genre: ["Web Development", "AI", "Humor", "Tutorial"]
-  audience: "web developers, designers, AI enthusiasts"
+excerpt: "What happens when you tell GitHub Copilot to 'go full chaos and crazy'? You get a glorious 90s nostalgia explosion mixed with Matrix effects and enough rainbow animations to power a small rave."
 ---
 
 ## The Day I Broke the Internet (In the Most Spectacular Way Possible) 💥
