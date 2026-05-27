@@ -4,47 +4,38 @@ title: About
 permalink: /about/
 ---
 
-## About Mark Hazleton
+## Hi, I'm Mark
 
-Mark Hazleton is a seasoned Solutions Architect with a passion for creating technology solutions that drive business success. With extensive experience in both on-premises and cloud-based environments, Mark has worked with organizations of all sizes, from small businesses to large enterprises.
+I'm a solutions architect based in the US. I've been building software professionally for 30+ years, which means I've seen a lot of things go wrong in interesting ways and occasionally seen them go right.
 
-His approach focuses on delivering tangible benefits while avoiding unnecessary complexity. Mark's expertise spans a wide range of technologies, including Microsoft Azure, .NET, Docker, and modern web development frameworks. He is also an advocate for lifelong learning, continuously expanding his knowledge to stay ahead in the ever-evolving tech landscape.
+My day job involves Azure, .NET, cloud architecture, and helping teams make decisions they can actually live with six months later. I co-founded [Make Bold Solutions](https://makeboldsolutions.com) with my wife, and I run a portfolio of open-source demos at [Make Bold Spark](https://makeboldspark.com).
 
-For more information about Mark's work and professional experience, visit [markhazleton.com](https://markhazleton.com).
+## What I Actually Do
+
+Mostly I help organizations figure out where complexity belongs in their systems — which is a fancy way of saying I try to make sure the next developer who touches the code doesn't have to read three years of Slack history to understand why something works the way it does.
+
+Day to day that means:
+
+- Azure architecture and .NET development
+- Cloud integration patterns (the boring reliable kind, not the impressive fragile kind)
+- AI-assisted delivery — figuring out where it helps and where it just adds noise
+- Dragging legacy systems into the present without burning everything down
 
 ## This Blog
 
-This site serves as a personal blog where I share insights on software development, technology trends, and lessons learned throughout my career as a Solutions Architect. Topics covered include:
+This is not my professional site. That's [markhazleton.com](https://markhazleton.com).
 
-- **Software Development**: Best practices, design patterns, and practical coding solutions
-- **Cloud Architecture**: Azure solutions, scalable system design, and cloud migration strategies  
-- **Technology Leadership**: Team management, technical decision-making, and career development
-- **Continuous Learning**: Exploring new technologies and staying current in the tech industry
+This is where I write things down when I figure something out, get something wrong, or just want to think out loud. Topics wander — Jekyll, static sites, .NET, Azure, Docker, AI tools, and the occasional experiment that gets completely out of hand (see: [the chaos mode post](/updates/development/2025/07/24/unleashing-maximum-chaos-web-design.html)).
 
-## Building with Jekyll
+No comments. No newsletter. No algorithm to please. Just posts.
 
-This site is built using Jekyll, a static site generator that powers GitHub Pages. Jekyll offers several advantages:
+## Built With
 
-- **Simplicity**: Write content in Markdown and let Jekyll handle the conversion
-- **Performance**: Static sites load quickly and scale efficiently
-- **Version Control**: All content lives in Git for easy tracking and rollback
-- **Customization**: Full control over layouts, styling, and functionality
+This site runs on [Jekyll](https://jekyllrb.com) and [GitHub Pages](https://pages.github.com), with [Bootstrap 5](https://getbootstrap.com) for layout and a dark/light mode toggle that actually works. Part of the [Make Bold Spark](https://makeboldspark.com) portfolio.
 
-### Key Technologies
+## Find Me Elsewhere
 
-- **Jekyll** - Static site generator
-- **GitHub Pages** - Hosting and deployment
-- **Markdown** - Content authoring
-- **Liquid** - Templating language
-- **SCSS** - Styling
-
-## Connect
-
-Feel free to connect with me on:
-
-- **GitHub**: [@markhazleton](https://github.com/markhazleton)
-- **LinkedIn**: [Mark Hazleton](https://linkedin.com/in/markhazleton)
-- **Twitter**: [@markhazleton](https://twitter.com/markhazleton)
-- **Stack Overflow**: [Profile](https://stackoverflow.com/users/479571)
-
-For professional inquiries or consulting opportunities, please visit [markhazleton.com](https://markhazleton.com).
+- **GitHub**: [github.com/markhazleton](https://github.com/markhazleton) — where the actual code lives
+- **LinkedIn**: [linkedin.com/in/markhazleton](https://linkedin.com/in/markhazleton) — if you want the professional version of me
+- **Stack Overflow**: [my profile](https://stackoverflow.com/users/479571) — 30 years of questions, some of which I even answered
+- **Main site**: [markhazleton.com](https://markhazleton.com) — projects, writing, and the rest of it

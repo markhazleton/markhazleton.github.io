@@ -1,6 +1,45 @@
 /* ==========================================================================
-   Mark Hazleton's World-Class Bootstrap 5 Theme
+   SimpleBlog — Mark's Dev Notebook
    ========================================================================== */
+
+.site-tagline {
+  display: block;
+  font-size: 0.75rem;
+  font-style: italic;
+  opacity: 0.65;
+  margin-top: 0.1rem;
+  letter-spacing: 0.01em;
+}
+
+.intro-blurb {
+  border-left: 3px solid var(--bs-primary, #0d6efd);
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.post-tags {
+  margin-top: 0.25rem;
+}
+
+.post-tags .tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: rgba(var(--primary-rgb, 13,110,253), 0.1);
+  color: var(--bs-primary, #0d6efd);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  margin-right: 0.25rem;
+  text-decoration: none;
+}
+
+.post-count-note {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
 
 /* ==========================================================================
    CSS Custom Properties (Variables)

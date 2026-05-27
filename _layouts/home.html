@@ -11,6 +11,7 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <p class="post-count-note">{{ site.posts.size }} posts and counting</p>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -23,6 +24,13 @@ layout: default
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
+        {%- endif -%}
+        {%- if post.tags.size > 0 -%}
+          <div class="post-tags">
+            {%- for tag in post.tags -%}
+              <span class="tag">{{ tag }}</span>
+            {%- endfor -%}
+          </div>
         {%- endif -%}
       </li>
       {%- endfor -%}
