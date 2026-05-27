@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Day of Site Cleanup"
-date: 2026-05-27 18:00:00 -0500
+date: 2026-05-27 08:00:00 -0500
 categories: [updates, development]
 tags: [jekyll, seo, github-pages, make-bold-spark, ga4, branding]
 author: Mark Hazleton
