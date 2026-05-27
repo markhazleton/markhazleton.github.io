@@ -12,7 +12,7 @@ Personal Jekyll blog site for Mark Hazleton, deployed to GitHub Pages from the `
 - GitHub Actions for automated CI/CD
 
 **Key URLs:**
-- Production: https://markhazleton.com
+- Production: https://simpleblog.makeboldspark.com
 - Repository: https://github.com/markhazleton/markhazleton.github.io
 - Source branch: `sources` → deploys to `gh-pages`
 
