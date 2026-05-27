@@ -27,6 +27,10 @@ plugins:
 # Remote theme
 remote_theme: null
 
+# Only show these pages in the header nav
+header_pages:
+  - about.markdown
+
 # Minima theme settings
 minima:
   skin: auto

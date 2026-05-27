@@ -1,8 +1,7 @@
 ---
 layout: home
+title: ""
 ---
-
-# Hi, I'm Mark
 
 A solutions architect with 30+ years of building things that (mostly) don't break in production.
 I work with Azure, .NET, Docker, and whatever else looks interesting that week.
